@@ -5,7 +5,7 @@ let display = document.getElementById('display');
 
 const convert = (temp) => {
     let indicator = document.querySelector('input[name="tempType"]:checked');
-    
+    console.log(indicator.value)
     //converts from F to C
     if (indicator.value === 'F') {
         var newTemp = Math.round((temp - 32) * (5 / 9));

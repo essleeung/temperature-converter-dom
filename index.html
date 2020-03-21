@@ -6,22 +6,28 @@
   <!-- Google fonts -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Materialize CDN -->
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>Temperature Converter</title>
 </head>
 <body class="blue-grey lighten-5">
   <h1>Temperature Converter</h1>
   <div class="container">
-    <form onsubmit="return false">
+    <form onsubmit="return false" action="#">
       <!-- user input field for temp -->
       <input type="text" name="tempInput" id="tempInput" placeholder="0">
       <!-- type of temp conversion radio buttons -->
-      <div id="radio input-field">
-        <input type="radio" class="tempType with-gap" name="tempType" value="F" id="F">
-        <span><label for="F" value="F">&#x2109</label></span>
-        <input type="radio" class="tempType with-gap" name="tempType" value="C" id="C">
-        <span><label for="C" value="C">&#x2103</label></span>
+      <div class="radio">
+        <label>
+          <input type="radio" class="tempType with-gap" name="tempType" value="F" id="F" checked> 
+          <span>&#x2109</span>
+        </label>
+        <label>
+          <input type="radio" class="tempType with-gap" name="tempType" value="C" id="C">
+          <span>&#x2103</span>
+        </label>
+        
+        
       </div>
       <!-- submission & clear buttons -->
       <div>
@@ -35,6 +41,6 @@
   
 
   <script type="text/javascript" src="js/script.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>

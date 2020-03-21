@@ -1,4 +1,8 @@
 
+* {
+  font-size: 30px; 
+}
+
 h1 {
   color:#424242;
   text-align: center;
@@ -10,12 +14,19 @@ h1 {
   width: 60%;
 }
 
-div {
-    padding: 10px;
+.radio {
+    padding: 5px;
     margin: 5px; 
-    font-size: 25px;
 }
-label {
-  font-size: 26px;
+#tempInput {
+ width: 50%;
+ text-align: center;
+}
+.display {
+  padding: 40px;
+}
+
+div {
+  padding: 10px;
 
 }
