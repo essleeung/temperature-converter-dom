@@ -3,26 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Materialize CDN -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>Temperature Converter</title>
 </head>
-<body>
+<body class="blue-grey lighten-5">
   <h1>Temperature Converter</h1>
   <div class="container">
-    <form onsubmit="return false" >
+    <form onsubmit="return false">
       <!-- user input field for temp -->
       <input type="text" name="tempInput" id="tempInput" placeholder="0">
       <!-- type of temp conversion radio buttons -->
-      <div id="radio">
-        <input type="radio" class="tempType" name="tempType" value="F">
-        <label for="F">&#x2109</label>
-        <input type="radio" class="tempType" name="tempType" value="C">
-        <label for="C">&#x2103</label>
+      <div id="radio input-field">
+        <input type="radio" class="tempType with-gap" name="tempType" value="F" id="F">
+        <span><label for="F" value="F">&#x2109</label></span>
+        <input type="radio" class="tempType with-gap" name="tempType" value="C" id="C">
+        <span><label for="C" value="C">&#x2103</label></span>
       </div>
       <!-- submission & clear buttons -->
       <div>
-        <button id="submit">Submit</button>
-        <button id="clear">Clear</button>
+        <button id="submit" class="waves-effect btn">Submit</button>
+        <button id="clear" class="waves-effect btn">Clear</button>
       </div>
       <!-- display of coverted temperature  -->
       <div id="display"></div>
@@ -31,5 +35,6 @@
   
 
   <script type="text/javascript" src="js/script.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
 </body>
 </html>

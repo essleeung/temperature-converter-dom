@@ -2,34 +2,33 @@ let temp = document.getElementById('tempInput');
 let submitBtn = document.getElementById('submit');
 let clearBtn = document.getElementById('clear');
 let display = document.getElementById('display');
-// let radioBtns = document.getElementsByClassName('tempType');
 
 const convert = (temp) => {
-    let indicator = document.querySelector('input[name="tempType"]:checked')
+    let indicator = document.querySelector('input[name="tempType"]:checked');
+    
+    //converts from F to C
     if (indicator.value === 'F') {
         var newTemp = Math.round((temp - 32) * (5 / 9));
-        display.textContent = newTemp + "\xB0C";
-    } else if (indicator.value === 'C') {
+        //changes color to indicate if it's hot or cold
+        if (newTemp >= 25) {
+            console.log('help')
+            display.style.color = 'red';
+        } else if (newTemp <= 0) {
+            display.style.color = 'blue';
+        }
+        display.textContent = newTemp + "\xB0C"; 
+
+    //converts from C to F
+    } else {
         var newTemp = Math.round((temp * 9 / 5) + 32);
+        if (newTemp >= 77) {
+            display.style.color = 'red';
+        } else if (newTemp <= 32) {
+            display.style.color = 'blue';
+        }
         display.textContent = newTemp + "\xB0F";
     }
 }
-//Which coversion based on radio button
-// let convert = (temp) => {
-//     //convert sFtoC
-//     if(radioBtns[0].checked === true) { 
-//         var newTemp = Math.round((temp - 32) * (5/9));
-//         display.textContent = newTemp + "\xB0C";
-//     } else {
-//         var newTemp = Math.round((temp * 9/5) + 32);
-//         display.textContent = newTemp + "\xB0F";
-//     }
-// }
-
-//Using radiobtn for submit
-// submitBtn.addEventListener("click", (e) => {
-//     convert(temp.value);
-// });
 
 submitBtn.addEventListener("click", (e) => {
     convert(temp.value);
